@@ -1,0 +1,349 @@
+/* App Container */
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+/* Header */
+.app-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.app-header h1 {
+  color: #24292e;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.app-header p {
+  color: #586069;
+  font-size: 1.1rem;
+}
+
+/* Search Component */
+.search-container {
+  margin-bottom: 2rem;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+}
+
+.search-input-group {
+  display: flex;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.search-input {
+  flex: 1;
+  padding: 12px 16px;
+  border: 1px solid #d1d5da;
+  border-right: none;
+  font-size: 16px;
+  outline: none;
+}
+
+.search-input:focus {
+  border-color: #0366d6;
+  box-shadow: inset 0 1px 2px rgba(27, 31, 35, 0.075);
+}
+
+.search-button {
+  padding: 12px 20px;
+  background-color: #0366d6;
+  color: white;
+  border: 1px solid #0366d6;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.2s;
+}
+
+.search-button:hover:not(:disabled) {
+  background-color: #0256cc;
+}
+
+.search-button:disabled {
+  background-color: #94a3b8;
+  cursor: not-allowed;
+}
+
+/* Search Results */
+.search-results {
+  margin-top: 2rem;
+}
+
+.search-results h2 {
+  color: #24292e;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.users-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.user-item {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+  background-color: #fff;
+  transition: box-shadow 0.2s;
+}
+
+.user-item:hover {
+  box-shadow: 0 3px 12px rgba(27, 31, 35, 0.15);
+}
+
+.user-avatar-small {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.user-info-small h4 {
+  margin: 0 0 0.5rem 0;
+  color: #24292e;
+}
+
+.user-link {
+  color: #0366d6;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.user-link:hover {
+  text-decoration: underline;
+}
+
+/* Loading and Error States */
+.loading-message, .error-message {
+  text-align: center;
+  padding: 2rem;
+  margin-top: 1rem;
+}
+
+.loading-message p {
+  color: #586069;
+  font-size: 1.1rem;
+}
+
+.error-message p {
+  color: #d73a49;
+  font-size: 1.1rem;
+  background-color: #ffeef0;
+  border: 1px solid #f85149;
+  border-radius: 6px;
+  padding: 1rem;
+  margin: 0;
+}
+
+/* User Result Display */
+.user-result {
+  display: flex;
+  align-items: flex-start;
+  padding: 2rem;
+  margin-top: 2rem;
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+.user-result .user-avatar {
+  margin-right: 2rem;
+}
+
+.user-result .user-avatar img {
+  width: 120px;
+  height: 120px;
+  border-radius: 6px;
+  border: 1px solid #e1e4e8;
+}
+
+.user-result .user-info {
+  flex: 1;
+}
+
+.user-result .user-info h3 {
+  margin: 0 0 0.5rem 0;
+  color: #24292e;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.user-result .username {
+  margin: 0 0 1rem 0;
+  color: #586069;
+  font-size: 1.1rem;
+}
+
+.user-result .bio {
+  margin: 0 0 1.5rem 0;
+  color: #24292e;
+  line-height: 1.5;
+  font-size: 1rem;
+}
+
+.user-result .user-stats {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.user-result .user-stats span {
+  color: #586069;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.github-profile-link {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #0366d6;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.github-profile-link:hover {
+  background-color: #0256cc;
+}
+
+/* Responsive Design for User Result */
+@media (max-width: 768px) {
+  .user-result {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .user-result .user-avatar {
+    margin-right: 0;
+    margin-bottom: 1.5rem;
+    align-self: center;
+  }
+  
+  .user-result .user-stats {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+/* User Card Component */
+.user-card {
+  display: flex;
+  padding: 2rem;
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+  background-color: #fff;
+  margin-bottom: 1rem;
+}
+
+.user-avatar img {
+  width: 120px;
+  height: 120px;
+  border-radius: 6px;
+  margin-right: 2rem;
+}
+
+.user-info {
+  flex: 1;
+}
+
+.user-login {
+  margin: 0 0 0.5rem 0;
+  color: #24292e;
+  font-size: 1.8rem;
+}
+
+.user-name {
+  margin: 0 0 1rem 0;
+  color: #586069;
+  font-size: 1.1rem;
+}
+
+.user-bio {
+  margin: 0 0 1rem 0;
+  color: #24292e;
+  line-height: 1.5;
+}
+
+.user-stats {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.stat {
+  color: #586069;
+  font-size: 0.9rem;
+}
+
+.user-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.github-link, .blog-link {
+  padding: 0.5rem 1rem;
+  background-color: #f6f8fa;
+  color: #24292e;
+  text-decoration: none;
+  border-radius: 6px;
+  border: 1px solid #d1d5da;
+  transition: background-color 0.2s;
+}
+
+.github-link:hover, .blog-link:hover {
+  background-color: #e1e4e8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .app-container {
+    padding: 10px;
+  }
+  
+  .search-input-group {
+    flex-direction: column;
+  }
+  
+  .search-input, .search-button {
+    border-radius: 6px;
+    border: 1px solid #d1d5da;
+  }
+  
+  .search-button {
+    margin-top: 0.5rem;
+  }
+  
+  .users-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .user-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .user-avatar {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+}
